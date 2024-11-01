@@ -13,7 +13,7 @@ type SearchParams = z.infer<typeof searchParamsSchema>;
 
 export const Route = createFileRoute("/react-query")({
   component: ReactQuery,
-  // https://tanstack.com/router/latest/docs/framework/react/guide/search-params#validating-search-params
+  // Ref: https://tanstack.com/router/latest/docs/framework/react/guide/search-params#validating-search-params
   validateSearch: (search): SearchParams => {
     return searchParamsSchema.parse(search);
   },
